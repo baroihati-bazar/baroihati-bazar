@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>বারইহাটি বাজার</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#faf6ee;--card:#fff;--tx:#241c12;--mu:#6b5f4f;--ac:#b4501a;--ac2:#f3e2d0;--bd:#e6dccb;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17130e;--card:#221c14;--tx:#f3ebdd;--mu:#b3a690;--ac:#e8895a;--ac2:#3a2a1c;--bd:#3a3023;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#17130e;--card:#221c14;--tx:#f3ebdd;--mu:#b3a690;--ac:#e8895a;--ac2:#3a2a1c;--bd:#3a3023;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"Noto Sans Bengali","Hind Siliguri",system-ui,sans-serif;line-height:1.7}
+header{background:var(--ac);color:#fff;padding:18px 16px 0}
+.w{max-width:960px;margin:auto}
+h1{margin:0;font-size:1.7rem}
+header p{margin:2px 0 12px;opacity:.9;font-size:.95rem}
+nav{display:flex;gap:4px;overflow-x:auto}
+nav a{color:#fff;text-decoration:none;padding:9px 14px;border-radius:10px 10px 0 0;white-space:nowrap;opacity:.85}
+nav a.on{background:var(--bg);color:var(--ac);opacity:1;font-weight:700}
+main{padding:20px 16px 40px}
+section{display:none}section.on{display:block}
+h2{margin:0 0 10px;font-size:1.35rem}
+.g{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}
+.c{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:14px}
+.c h3{margin:0 0 4px;font-size:1.05rem}
+.m{color:var(--mu);font-size:.9rem}
+.tag{display:inline-block;background:var(--ac2);color:var(--ac);border-radius:99px;padding:1px 10px;font-size:.8rem;margin-bottom:6px}
+.bar{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 14px}
+input,select{font:inherit;padding:9px 12px;border:1px solid var(--bd);border-radius:10px;background:var(--card);color:var(--tx);flex:1;min-width:150px}
+a.tel{color:var(--ac);font-weight:600;text-decoration:none}
+.note{background:var(--ac2);border-radius:12px;padding:10px 14px;font-size:.88rem;margin-top:18px}
+footer{text-align:center;color:var(--mu);font-size:.85rem;padding:16px}
+button{font:inherit;background:var(--ac);color:#fff;border:0;border-radius:10px;padding:9px 16px;cursor:pointer;margin-top:10px}
+canvas.qr{width:190px;height:190px;max-width:100%;image-rendering:pixelated;border:1px solid var(--bd);border-radius:8px;background:#fff}
+canvas.sm{width:110px;height:110px}
+.av{width:84px;height:84px;border-radius:50%;object-fit:cover;background:var(--ac2);color:var(--ac);display:flex;align-items:center;justify-content:center;font-size:2rem;margin:0 auto 8px;border:2px solid var(--bd)}
+.cm{text-align:center}
+.board{border:2px dashed var(--bd);border-radius:12px;min-height:220px;display:flex;align-items:center;justify-content:center;color:var(--mu);text-align:center;padding:12px;overflow:hidden}
+.board img{max-width:100%;border-radius:8px}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+</head>
+<body>
+<header><div class="w">
+<h1>🛒 বারইহাটি বাজার</h1>
+<p>আপনার এলাকার বিশ্বস্ত কেনাকাটার ঠিকানা</p>
+<nav id="nav"><a href="#home">হোম</a><a href="#shops">দোকানসমূহ</a><a href="#guards">পাহারার তালিকা</a><a href="#committee">বাজার কমিটি</a><a href="#contact">যোগাযোগ</a></nav>
+</div></header>
+<main class="w">
+
+<section id="home">
+<h2>বাজার পরিচিতি</h2>
+<p>বারইহাটি বাজার স্থানীয় মানুষের দৈনন্দিন কেনাকাটার কেন্দ্র। এখানে মুদি, সবজি, মাছ-মাংস, কাপড়, ওষুধ ও ইলেকট্রনিক্সসহ নানা ধরনের দোকান এক জায়গায় পাওয়া যায়।</p>
+<h2 style="margin-top:20px">বাজারের সুবিধা</h2>
+<div class="g">
+<div class="c"><h3>📦 সব এক জায়গায়</h3><span class="m">নিত্যপ্রয়োজনীয় সব পণ্য কাছাকাছি।</span></div>
+<div class="c"><h3>🌙 রাতে নিরাপত্তা</h3><span class="m">নৈশপ্রহরী দ্বারা নিয়মিত পাহারা।</span></div>
+<div class="c"><h3>🕖 নিয়মিত খোলা</h3><span class="m">সকাল থেকে রাত পর্যন্ত বেচাকেনা।</span></div>
+<div class="c"><h3>🤝 কমিটির তত্ত্বাবধান</h3><span class="m">যেকোনো অভিযোগ কমিটিকে জানানো যায়।</span></div>
+</div>
+<h2 style="margin-top:20px">নির্বাচিত দোকান</h2>
+<div class="g" id="featShops"></div>
+<h2 style="margin-top:20px">আজকের পাহারাদার</h2>
+<div class="g" id="featGuards"></div>
+</section>
+
+<section id="shops">
+<h2>দোকানসমূহ</h2>
+<div class="bar"><input id="q" placeholder="দোকানদারের নাম বা দোকানের ধরন খুঁজুন…"><select id="cat"></select></div>
+<div class="m" id="cnt"></div>
+<div class="g" id="shopList"></div>
+</section>
+
+<section id="guards">
+<h2>পাহারার তালিকা</h2>
+<div class="bar"><select id="shift"><option value="">সব শিফট</option><option>দিন</option><option>রাত</option></select></div>
+<div class="g" id="guardList"></div>
+</section>
+
+<section id="committee">
+<h2>বাজার কমিটি</h2>
+<div class="m">বণিক সমিতি কার্যকরী পরিষদ ২০২৬–২৮ ইং</div>
+<div class="g" id="comList" style="margin-top:12px"></div>
+<h2 style="margin-top:24px">বাজারের আইন-কানুন</h2>
+<div class="board" id="board"></div>
+<h2 style="margin-top:24px">আইন-কানুন বিষয়ে যোগাযোগ</h2>
+<div class="g" id="ruleContacts"></div>
+</section>
+<section id="contact">
+<h2>যোগাযোগ</h2>
+<div class="g">
+<div class="c"><h3>📍 কমিটি অফিস</h3><span class="m">বারইহাটি বাজার, মূল প্রবেশপথের পাশে</span></div>
+<div class="c"><h3>📞 হটলাইন</h3><a class="tel" href="tel:01700000000">০১৭০০-০০০০০০</a></div>
+<div class="c"><h3>🕘 অফিস সময়</h3><span class="m">শনি–বৃহস্পতি, সকাল ৯টা – সন্ধ্যা ৬টা</span></div>
+</div>
+<div class="c" style="margin-top:14px;text-align:center"><h3>📱 বাজারের QR কোড</h3>
+<canvas id="qr1" class="qr"></canvas>
+<div class="m">মোবাইলের ক্যামেরায় ছবি তুললেই সাইট খুলবে। পোস্টার ডাউনলোড করে ছাপিয়ে দোকানে টানান।</div>
+<button id="dl">⬇ ছাপার পোস্টার ডাউনলোড (PNG)</button>
+<div class="m" id="qmsg"></div>
+<div class="bar" style="margin-top:10px"><input id="qurl" aria-label="সাইটের ঠিকানা" placeholder="সাইটের ঠিকানা"></div>
+<div class="m">নতুন ডোমেইন হলে ঠিকানা এখানে বদলালে QR বদলে যাবে।</div></div>
+</section>
+
+<div class="note">ℹ️ দোকানদারদের তালিকা বারইহাটি বাজার ব্যবসায়ী ব্যবস্থাপনা বণিক সমিতির সদস্য তালিকা (২০২৬–২৮) থেকে নেওয়া। পাহারাদারের তথ্য এখনো নমুনা।</div>
+</main>
+<footer><canvas id="qr2" class="qr sm"></canvas><div>📷 স্ক্যান করে সাইট খুলুন</div>© বারইহাটি বাজার কমিটি</footer>
+
+<script>
+var raw=`মোঃ হেলাল ফরাজী|এন্টারপ্রাইজ
+মোঃ আজিজুল হক|হোটেল
+মোঃ শারফুল|ফার্নিচার
+রিয়ান মিয়া সাদেক|কম্পিউটার
+মোঃ আলম|ফার্নিচার
+মোঃ এমদাদুল ফরাজী|কম্পিউটার
+মোঃ ছাইফুল ফরাজী|কসমেটিক্স
+মোঃ আবদুল্লাহ|ওয়ার্কসপ
+মোঃ নয়ন ফরাজী|চা স্টল
+মোঃ সোহরাব উদ্দিন|কসমেটিক্স
+মোঃ রফিকুল ইসলাম|লাইব্রেরী
+মোঃ শারফুল ইসলাম|কসমেটিক্স
+মোঃ আতাউর রহমান|চা স্টল
+মোঃ শাহজাহান মিয়া|চা স্টল
+মোঃ কালাম ফরাজী|এন্টারপ্রাইজ
+শ্রী কার্তিক|ফার্মেসী
+ডা. মোঃ জুয়েল মাস্টার|ফার্মেসী
+রফিকুল ইসলাম রুহুল|বস্ত্রালয়
+মোঃ জুয়েল মিয়া|মনোহরী
+শ্রী স্বপন|বানিয়া
+মোঃ নয়ন বেপারী|বস্ত্রালয়
+মোঃ আবু সাইদ|বস্ত্রালয়
+মোঃ শিহাব ফরাজী|এন্টারপ্রাইজ
+ডা. মোঃ জাহাংগীর আলম|ফার্মেসী
+মোঃ শাহজাহান মিয়া|বস্ত্রালয়
+মোঃ কামাল মন্ডল|চা স্টল
+শ্রী সুজন|মেকার
+মোঃ দুলাল মিয়া|বস্ত্রালয়
+মোঃ আপেল (তানজির আহম্মেদ)|লাইব্রেরী
+মুর্শিদ ফরাজী (আ: বাতেন)|এন্টারপ্রাইজ
+শ্রী সুনিল|সেলুন
+মোঃ আফতাব উদ্দিন|বস্ত্রালয়
+ডা. সাদ্দাম|ফার্মেসী
+মোঃ হাছেন সরকার|পানের দোকান
+মোঃ ফখরুল মন্ডল|চা স্টল
+মোঃ রিফাত ফরাজী|মনোহরী
+মোঃ মুর্শিদ খন্দকার|মনোহরী
+ডা. মোঃ সায়েম|ফার্মেসী
+মোঃ অলিল পাঠান|বিকাশ
+মোঃ মোজাম্মেল|হোটেল
+মোঃ জাকির|ধানের বেপারী
+শ্রী বাদল|সেলুন
+মোঃ ফারুক মিয়া|হোটেল
+মোঃ সিরাজ মিয়া|টিন
+মোঃ ওয়াহিদ মিয়া|মনোহরী
+মোঃ রিফাত খন্দকার|মনোহরী
+মোঃ রাজ্জাক খান|বস্ত্রালয়
+মোঃ সাকিব|মনোহরী
+মোঃ রহিম মিয়া|হোটেল
+মোঃ নজরুল ইসলাম|চা স্টল
+মোঃ খোকা|মোবাইল মেকার
+মোঃ সাকিব|মনোহরী
+মোঃ নাইম|ইলেকট্রনিক্স
+তাইজ উদ্দিন সরকার|তেল (সরকার স্টোর)
+মোঃ কামাল শেখ|পাম্প
+মোঃ সাইফ উদ্দিন|চা স্টল
+মোঃ রহুল মিয়া|খাদ্য ডিলার
+মোঃ আরিফ খান|ফার্নিচার
+মোঃ আলম|মেকার
+শ্রী তাপস|দলিল লেখক
+মোঃ আবুল কালাম|টিন
+মোঃ এখলাছ|লেপ-তুশক
+মোঃ কাঞ্চন মিয়া|মেকার
+মোঃ খসরু মিয়া|চা স্টল
+তরিকুল ইসলাম|ফার্মেসী
+মোঃ সানা উল্লাহ|মনোহরী
+আঃ সালাম বাচ্চু খন্দকার|এন্টারপ্রাইজ
+খাইরুল বাশার|ফার্নিচার
+মোঃ নূরু|চা স্টল
+মোঃ ফিরোজ খান|বিকাশ
+মোঃ ইদ্রিস আলী|মনোহরী
+মোঃ আঃ গণি|বিকাশ
+মোঃ বোরহান|ফার্মেসী
+ফজলু ও রতন|চা স্টল ও বর্তন
+মোঃ মাহাবুল|মোবাইল মেকার
+মোঃ খোরশেদ খন্দকার|মনোহরী
+শ্রী জুটন|বানিয়া
+মোঃ বোরহান|মনোহরী
+মোঃ মনির মিয়া|ইসলামী ব্যাংক
+ডা. জহিরুল ফরাজী|ফার্মেসী
+শ্রী সূজন (মদন)|বানিয়া
+মোঃ নূর ইসলাম|বস্ত্রালয়
+মোঃ শাহাব উদ্দিন|মনোহরী
+মোঃ মিজান মিয়া|ফার্নিচার
+কাজী সাদিকুল ইসলাম|ই-সেবা (কাজী অফিস)
+মোঃ মনু মিয়া (ইসমাইল হোসেন)|কীট নাশক
+বেলায়েত ফরাজী|ইন্টারনেট
+মোঃ সুলতান|মনোহরী
+মোঃ ইন্তাজ মিয়া|মেকার
+মোঃ আঃ ওয়াহাব|হোটেল
+মোঃ আশরাফুল ফরাজী|বিকাশ
+মোঃ তানজীম|কম্পিউটার
+মোঃ হাইদুল|বস্ত্রালয়
+তোফাজ্জল|কসাই
+মোঃ মামুন মন্ডল|মেকার
+রুহুল মিয়া|ডেকোরেটর
+শামছুল আলম|ডিলার
+হিরন মন্ডল|ওয়ার্কসপ
+ওয়াশিম মন্ডল|কাঁচা মাল
+মোস্তফা শেখ|পানের দোকান
+ফাইজ উদ্দিন|কাঁচা মাল
+শারফুল|ডিম
+আনোয়ার হোসেন|মনোহরী
+আনোয়ার ফরাজী|লাইব্রেরী
+নূর ইসলাম খন্দকার|চা স্টল
+শ্রী বাদল|সু-স্টোর
+সজিব|কসমেটিক্স
+জাকির হোসেন|কসমেটিক্স
+মোঃ মামুন মিয়া|কাঁচামাল`;
+var shops=raw.split('\n').map(function(l,i){var a=l.split('|');return{i:i+1,n:a[0],c:a[1]}});
+var guards=[
+{n:"মোঃ সোহেল",s:"রাত",pl:"উত্তর গেট",e:"৫ বছর",p:"01800-000001"},
+{n:"আব্দুল জব্বার",s:"রাত",pl:"মাছ বাজার অংশ",e:"৮ বছর",p:"01800-000002"},
+{n:"শফিক উদ্দিন",s:"দিন",pl:"মূল প্রবেশপথ",e:"৩ বছর",p:"01800-000003"},
+{n:"মনির হোসেন",s:"দিন",pl:"সবজি বাজার",e:"৪ বছর",p:"01800-000004"}];
+function tel(p){return '<a class="tel" href="tel:'+p.replace(/-/g,'')+'">'+p+'</a>'}
+function shopCard(s){return '<div class="c"><span class="tag">'+s.c+'</span><h3>'+s.n+'</h3><div class="m">ক্রমিক নং: '+s.i.toLocaleString('bn-BD')+'</div></div>'}
+function guardCard(g){return '<div class="c"><span class="tag">'+g.s+' শিফট</span><h3>'+g.n+'</h3><div class="m">স্থান: '+g.pl+'<br>অভিজ্ঞতা: '+g.e+'<br>'+tel(g.p)+'</div></div>'}
+var $=function(i){return document.getElementById(i)};
+$('featShops').innerHTML=shops.slice(0,3).map(shopCard).join('');
+$('featGuards').innerHTML=guards.slice(0,2).map(guardCard).join('');
+var cats=[];shops.forEach(function(s){if(cats.indexOf(s.c)<0)cats.push(s.c)});
+$('cat').innerHTML='<option value="">সব বিভাগ</option>'+cats.map(function(c){return '<option>'+c+'</option>'}).join('');
+function rs(){var q=$('q').value.trim().toLowerCase(),c=$('cat').value;
+var r=shops.filter(function(s){return(!c||s.c===c)&&(!q||(s.n+s.c).toLowerCase().indexOf(q)>-1)});
+$('cnt').textContent=r.length+'টি দোকান পাওয়া গেছে';
+$('shopList').innerHTML=r.map(shopCard).join('')}
+function rg(){var v=$('shift').value;$('guardList').innerHTML=guards.filter(function(g){return!v||g.s===v}).map(guardCard).join('')}
+$('q').oninput=rs;$('cat').onchange=rs;$('shift').onchange=rg;rs();rg();
+var SITE='https://claude.ai/artifact/DTQHg71zBWmQpCAFk8G2fk';
+function drawQR(cv,u,px){try{var q=qrcode(0,'M');q.addData(u);q.make();var n=q.getModuleCount(),m=4,t=n+2*m,s=Math.max(1,Math.floor(px/t));cv.width=cv.height=t*s;var x=cv.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,cv.width,cv.height);x.fillStyle='#000';for(var r=0;r<n;r++)for(var c=0;c<n;c++)if(q.isDark(r,c))x.fillRect((c+m)*s,(r+m)*s,s,s)}catch(e){}}
+function cur(){return $('qurl').value.trim()||SITE}
+function paintQR(){var u=cur();drawQR($('qr1'),u,380);drawQR($('qr2'),u,220)}
+$('qurl').value=SITE;$('qurl').oninput=paintQR;if(window.qrcode)paintQR();
+function poster(u){var W=1200,H=1650,cv=document.createElement('canvas');cv.width=W;cv.height=H;var x=cv.getContext('2d'),f='"Noto Sans Bengali","Hind Siliguri",sans-serif';x.fillStyle='#fff';x.fillRect(0,0,W,H);x.fillStyle='#b4501a';x.fillRect(0,0,W,260);x.fillStyle='#fff';x.textAlign='center';x.font='bold 110px '+f;x.fillText('বারইহাটি বাজার',W/2,170);var q=document.createElement('canvas');drawQR(q,u,900);x.imageSmoothingEnabled=false;x.drawImage(q,150,330,900,900);x.fillStyle='#241c12';x.font='bold 80px '+f;x.fillText('ছবি তুলুন, সাইট খুলুন',W/2,1340);x.fillStyle='#6b5f4f';x.font='48px '+f;x.fillText('মোবাইল ক্যামেরা QR কোডের দিকে ধরুন',W/2,1420);x.font='30px sans-serif';x.fillText(u.length>60?u.slice(0,60)+'…':u,W/2,1520);return cv}
+$('dl').onclick=function(){var msg=$('qmsg');msg.textContent='';var p=(window.claude&&claude.use)?claude.use('downloads'):Promise.resolve(null);p.then(function(d){if(!d){msg.textContent='এখানে ডাউনলোড চালু নেই। QR ছবিতে চেপে ধরে সেভ করুন।';return}poster(cur()).toBlob(function(b){if(!b){msg.textContent='পোস্টার তৈরি হয়নি।';return}d.save({filename:'barihat-bazar-qr.png',data:b}).catch(function(e){if(!e||e.code!=='declined')msg.textContent='ডাউনলোড করা গেল না।'})})}).catch(function(){msg.textContent='ডাউনলোড করা গেল না।'})};
+var committee=[{pos:'সভাপতি'},{pos:'সহ-সভাপতি'},{pos:'সাধারণ সম্পাদক'},{pos:'সাংগঠনিক সম্পাদক'},{pos:'কোষাধ্যক্ষ'},{pos:'সদস্য'}];
+var BOARD='';
+var ruleContacts=[{l:'কমিটি অফিস'},{l:'সভাপতি'},{l:'সাধারণ সম্পাদক'}];
+function ph(p){return p?tel(p):'<span class="m">নম্বর যোগ হবে</span>'}
+$('comList').innerHTML=committee.map(function(m){var a=m.img?'<img class="av" src="'+m.img+'" alt="">':'<div class="av">👤</div>';return '<div class="c cm">'+a+'<span class="tag">'+m.pos+'</span><h3>'+(m.n||'নাম যোগ হবে')+'</h3>'+ph(m.p)+'</div>'}).join('');
+$('board').innerHTML=BOARD?'<img src="'+BOARD+'" alt="বাজারের আইন-কানুনের বোর্ড">':'📋 আইন-কানুনের বোর্ডের ছবি এখানে বসবে';
+$('ruleContacts').innerHTML=ruleContacts.map(function(r){return '<div class="c"><h3>📞 '+r.l+'</h3>'+ph(r.p)+'</div>'}).join('');
+var ids=['home','shops','guards','committee','contact'];
+function route(){var h=location.hash.slice(1);if(ids.indexOf(h)<0)h='home';
+ids.forEach(function(i){$(i).classList.toggle('on',i===h)});
+document.querySelectorAll('#nav a').forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+h)})}
+window.addEventListener('hashchange',route);route();
+</script>
+<script>
+(function(){
+var db=null,assets=null,st=document.createElement('style');
+st.textContent='.row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px;align-items:center}.row input{min-width:110px}.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}.tabs button{margin:0;background:var(--ac2);color:var(--ac)}.tabs button.on{background:var(--ac);color:#fff}#amsg{font-weight:700;margin-top:8px}';
+document.head.appendChild(st);
+function cl(a){return(Array.isArray(a)?a:[]).map(function(o){var r={};for(var k in o){var v=o[k];r[k]=typeof v==='string'?v.replace(/[<>"]/g,''):v}if(r.img&&r.img.indexOf('/_blob/')!==0)r.img='';return r})}
+function rc(){$('comList').innerHTML=committee.map(function(m){var a=m.img?'<img class="av" src="'+m.img+'" alt="">':'<div class="av">👤</div>';return '<div class="c cm">'+a+'<span class="tag">'+m.pos+'</span><h3>'+(m.n||'নাম যোগ হবে')+'</h3>'+ph(m.p)+'</div>'}).join('')}
+function rb(){$('board').innerHTML=BOARD?'<img src="'+BOARD+'" alt="আইন-কানুনের বোর্ড">':'📋 আইন-কানুনের বোর্ডের ছবি এখানে বসবে';$('ruleContacts').innerHTML=ruleContacts.map(function(r){return '<div class="c"><h3>📞 '+r.l+'</h3>'+ph(r.p)+'</div>'}).join('')}
+function apply(){shops.forEach(function(s,k){s.i=k+1});var v=$('cat').value,cs=[];shops.forEach(function(s){if(cs.indexOf(s.c)<0)cs.push(s.c)});$('cat').innerHTML='<option value="">সব বিভাগ</option>'+cs.map(function(c){return '<option>'+c+'</option>'}).join('');$('cat').value=v;rs();rg();rc();rb();$('featShops').innerHTML=shops.slice(0,3).map(shopCard).join('');$('featGuards').innerHTML=guards.slice(0,2).map(guardCard).join('')}
+function sub(){['shops','committee','guards','settings'].forEach(function(k){try{db.doc('site/'+k).onSnapshot(function(s){if(!s.exists)return;var d=s.data();if(k==='settings'){BOARD=(d.board&&String(d.board).indexOf('/_blob/')===0)?d.board:'';ruleContacts=cl(d.contacts)}else if(k==='shops')shops=cl(d.list);else if(k==='committee')committee=cl(d.list);else guards=cl(d.list);apply()},function(){})}catch(e){}})}
+var SCH={shops:[['n','দোকানদারের নাম'],['c','দোকানের ধরন']],committee:[['pos','পদ'],['n','নাম'],['p','ফোন নম্বর'],['img','','img']],guards:[['n','নাম'],['s','শিফট (দিন/রাত)'],['pl','দায়িত্বের স্থান'],['e','অভিজ্ঞতা'],['p','ফোন নম্বর']],contacts:[['l','লেবেল'],['p','ফোন নম্বর']]};
+function msg(t){$('amsg').textContent=t}
+function upl(f,cb){if(!assets){alert('ছবি আপলোড এখানে চালু নেই');return}assets.upload(f).then(function(x){cb(x.url)}).catch(function(){alert('আপলোড হয়নি')})}
+function save(doc,data,after){if(!db){msg('ডাটাবেস চালু নেই, সংরক্ষণ হয়নি');return}db.doc('site/'+doc).set(data).then(function(){after();msg('সংরক্ষিত হয়েছে ✓');}).catch(function(){msg('সংরক্ষণ হয়নি')})}
+function listEd(box,L,F,onSave){var rows=document.createElement('div'),act=document.createElement('div');box.innerHTML='';box.appendChild(rows);box.appendChild(act);
+function draw(){rows.innerHTML='';L.forEach(function(it,ix){var r=document.createElement('div');r.className='row';F.forEach(function(f){if(f[2]==='img'){if(it.img){var im=document.createElement('img');im.src=it.img;im.className='av';im.style.cssText='width:40px;height:40px;margin:0;font-size:1rem';r.appendChild(im)}var fi=document.createElement('input');fi.type='file';fi.accept='image/*';fi.style.minWidth='0';fi.onchange=function(){upl(fi.files[0],function(u){it.img=u;draw()})};r.appendChild(fi);return}var i=document.createElement('input');i.placeholder=f[1];i.value=it[f[0]]||'';i.oninput=function(){it[f[0]]=i.value};r.appendChild(i)});var d=document.createElement('button');d.textContent='✕';d.onclick=function(){L.splice(ix,1);draw()};r.appendChild(d);rows.appendChild(r)})}
+draw();var a=document.createElement('button');a.textContent='+ নতুন যোগ';a.onclick=function(){L.push({});draw()};var s=document.createElement('button');s.textContent='সংরক্ষণ করুন';s.style.marginLeft='8px';s.onclick=function(){onSave(L)};act.appendChild(a);act.appendChild(s)}
+function tab(k,box){var cp=function(o){return JSON.parse(JSON.stringify(o))};if(k==='settings'){var C=cp(ruleContacts),b=BOARD;box.innerHTML='<h3>আইন-কানুনের বোর্ডের ছবি</h3>';var fi=document.createElement('input');fi.type='file';fi.accept='image/*';fi.onchange=function(){upl(fi.files[0],function(u){b=u;msg('ছবি উঠেছে, সংরক্ষণ করুন')})};box.appendChild(fi);var h=document.createElement('h3');h.textContent='যোগাযোগ নম্বর';box.appendChild(h);var d=document.createElement('div');box.appendChild(d);listEd(d,C,SCH.contacts,function(L){save('settings',{board:b,contacts:L},function(){BOARD=b;ruleContacts=L;apply()})});return}
+listEd(box,cp(window[k]),SCH[k],function(L){save(k,{list:L},function(){window[k]=L;apply()})})}
+function initAdmin(){ids.push('admin');var n=document.createElement('a');n.href='#admin';n.textContent='⚙ অ্যাডমিন';$('nav').appendChild(n);var s=document.createElement('section');s.id='admin';s.innerHTML='<h2>অ্যাডমিন প্যানেল</h2><div class="tabs" id="atabs"></div><div id="abox"></div><div id="amsg"></div>';document.querySelector('main').insertBefore(s,document.querySelector('.note'));var T=[['shops','দোকানদার'],['committee','কমিটি'],['guards','পাহারাদার'],['settings','বোর্ড ও যোগাযোগ']];T.forEach(function(t){var b=document.createElement('button');b.textContent=t[1];b.onclick=function(){[].forEach.call($('atabs').children,function(x){x.classList.remove('on')});b.classList.add('on');msg('');tab(t[0],$('abox'))};$('atabs').appendChild(b)});$('atabs').firstChild.click();route()}
+if(window.claude&&claude.use){Promise.all([claude.use('db'),claude.use('user'),claude.use('assets')]).then(function(r){db=r[0];assets=r[2];if(db)sub();if(r[1]&&r[1].canEdit)r[1].canEdit().then(function(v){if(v)initAdmin()})}).catch(function(){})}
+})();
+</script>
+</body>
+</html>
